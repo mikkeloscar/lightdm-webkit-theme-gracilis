@@ -30,6 +30,7 @@ body {
   color: #f2f2f2;
   text-decoration: none;
   margin: 0 5px;
+  outline: none;
 }
 
 .action:hover {
@@ -77,6 +78,7 @@ body {
 
 .login-wrapper .password {
   padding: 0 10px;
+  height: 34px;
 }
 
 .login-wrapper .password, .login-wrapper .login, .login-wrapper .select-user {
