@@ -97,10 +97,9 @@ function show_prompt(text) {
 function authentication_complete() {
   log("authentication_complete()");
   auth_pending = false;
-  var selSession = $('.selected').attr('id');
   if (lightdm.is_authenticated) {
     log("authenticated !");
-    lightdm.login(lightdm.authentication_user, selSession);
+    lightdm.login(lightdm.authentication_user, lightdm.default_session);
   } else {
     log("not authenticated !");
     startAuthentication($("#username").val());
