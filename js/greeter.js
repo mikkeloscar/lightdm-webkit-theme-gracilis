@@ -42,8 +42,12 @@ $(document).ready(function () {
 
   setupUserList();
 
-  $("#shutdown").on("click", lightdm.shutdown);
-  $("#reboot").on("click", lightdm.restart);
+  $("#shutdown").on("click", function () {
+    lightdm.shutdown();
+  });
+  $("#reboot").on("click", function () {
+    lightdm.restart();
+  });
 
   // set focus on password field
   $("#password").focus();
