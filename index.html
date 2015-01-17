@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--For testing changes made to theme in any web browser-->
+    <script type="text/javascript" src="js/mock.js"></script>
+
+    <!-- Custom CSS here -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/gracilis.css" />
+  </head>
+  <body>
+    <div class="top-bar-wrapper">
+      <div class="top-bar">
+        <div class="left">
+          <a href="#" class="shutdown action" id="shutdown" title="Poweroff">
+            <i class="fa fa-power-off"></i>
+          </a>
+          <a href="#" class="reboot action" id="reboot" title="Reboot">
+            <i class="fa fa-refresh"></i>
+          </a>
+        </div><div class="right">
+          <div class="clock">
+            <i class="fa fa-clock-o"></i> <span id="clock"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="login-wrapper">
+      <form>
+        <div class="select-user">
+          <span class="select-down">
+            <i class="fa fa-chevron-down"></i>
+          </span>
+          <select class="select" id="username"></select>
+        </div>
+        <input type="password" id="password" class="password" placeholder="Password">
+        <button type="submit" class="login">Log in</button>
+      </form>
+    </div>
+
+    <div class="log">
+      <div class="header">Debug log</div>
+      <pre id="output"></pre>
+    </div>
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/greeter.js"></script>
+    <script src="js/clock.js"></script>
+  </body>
+</html>
