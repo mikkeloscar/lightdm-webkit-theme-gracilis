@@ -77,8 +77,6 @@ function startAuthentication(user) {
 
   localStorage.setItem("last_selected", user);
 
-  selectedUser = user;
-
   auth_pending = true;
 
   lightdm.start_authentication(user);
@@ -86,16 +84,16 @@ function startAuthentication(user) {
 
 function login() {
   lightdm.provide_secret($("#password").val());
-  log("done");
+  log("login");
 }
 
 /**
  * Lightdm Callbacks
  */
 function show_prompt(text) {
-    log("show_prompt(" + text + ")");
-    $('#password').val("");
-    $('#password').focus();
+  log("show_prompt(" + text + ")");
+  $('#password').val("");
+  $('#password').focus();
 }
 
 function authentication_complete() {
